@@ -1,15 +1,4 @@
-function nonConstructibleChange1(coins) {
-    let currentMinImpossibleChange = 1;
-      
-    const sortedCoins = coins.sort((a,b) => a-b)
-      
-    for(let i = 0; i < sortedCoins.length ; i += 1) {
-      if(currentMinImpossibleChange < sortedCoins[i]) return currentMinImpossibleChange
-      currentMinImpossibleChange += sortedCoins[i];
-    }
-      
-    return currentMinImpossibleChange;
-  }
+
 
   
   function nonConstructibleChange(coins) {
@@ -25,8 +14,3 @@ function nonConstructibleChange1(coins) {
       
       return currentValue + 1;
   }
-
-  coin = [5, 7, 1, 1, 2, 3, 22]
-
-  console.log(nonConstructibleChange(coin))
-  console.log(nonConstructibleChange1(coin))
